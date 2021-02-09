@@ -16,9 +16,17 @@ All the homeworks are distributed as Jupyter notebooks. Follow these instruction
 4. In the REPL (hit backspace to exit the package manager), enter `using IJulia`
 5. Launch the notebook using `notebook()` or `jupyterlab()`
 
-## Running the Autograder
-The autograder will run automatically whenever you push to GitHub. You can check the status of your autograding results in the `Actions` tab on GitHub, or see if your tests are passing by checking the badge at the top of this README.
+## Submitting your Homework
+Once you have pushed your final changes to GitHub, go to Github and select "Create a new release" on the right-hand side.
+Tag your release `v1.0` and set the title to be "Submission." If you have any comments about your release, such as 
+explaining any code that may not be working, or want to provide some details about a unique approach, feel free to include
+them in the description.
 
+The autograder will run once your release is submitted. If your tests don't pass, don't worry. We'll still run your code 
+locally and give you credit for what runs on our machines, and for what you've attempted to complete.
+
+## Running the Autograder
+You don't have to wait until your final submission to run the autograder. 
 To run the autograder locally, boot up a REPL in the root directory of this repository. Activate the current environment in the package manager (i.e. after entering `]`) using
 `activate .`. Then run the test suite (still in the package manager) enter `test HW1` and it will launch the testing suite. You will see a printout of the progress of the tests.
 
