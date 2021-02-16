@@ -32,6 +32,17 @@ To run the autograder locally, boot up a REPL in the root directory of this repo
 
 For more information on the autograder, see [this file](https://github.com/Optimal-Control-16-745/JuliaIntro/blob/main/docs/Autograding.md).
 
+### Testing Questions Individually
+To run the tests for an individual question, follow these steps:
+1. Edit the `nb` variable in `test/runtests.jl` to be the question(s) you want. It can be either a range (e.g. `2:3`) or an integer (e.g. `2`).
+2. Run the test script. You can do this any of the following ways. All commands assume you have a terminal at the root directory of the repository:
+    * Use package manager to run full test suite. In the REPL package manager, run `activate .`, then `test HW1`.
+    * Run from the REPL. In the REPL, activate the current project via `] activate .`, then in the REPL (hit backspace to exit the package manager) run the test file using `include("test/runtests.jl")`.
+    * Run directly from the command line. Enter the following command in the terminal: `julia --project=. test/runtests.jl`
+
+Remember to change the `nb` variable back to `1:3` before you submit your final version.
+We'll try to make this process easier in future homeworks.
+
 ## Questions / Issues
 If you have questions as you work through the homework, please post to the `hw1` channel on Slack, or sign up for office hours.
 

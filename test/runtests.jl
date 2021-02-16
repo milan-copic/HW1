@@ -8,9 +8,11 @@ using RobotZoo
 using RobotDynamics
 using StaticArrays
 
-HW1.notebook()
+nb = 1:3
+HW1.notebook(nb)
 
 ##
-include("q1.jl")
-include("q2.jl")
-include("q3.jl")
+nb = nb isa Integer ? nb:nb : nb
+1 ∈ nb && include("q1.jl")
+2 ∈ nb && include("q2.jl")
+3 ∈ nb && include("q3.jl")
