@@ -1,1 +1,3 @@
 .ipynb_checkpoints
+*_tmp.jl
+*_testsets.jl

@@ -1,10 +1,22 @@
-# Optimal Control 16-745 HW1: Due Thursday, February 18
-![CI](https://github.com/Optimal-Control-16-745/HW1/workflows/CI/badge.svg)
-
+# Optimal Control 16-745 HW1: Due Friday, February 11 by midnight
 In this homework we'll be exploring topics in dynamics and optimization. Here's an overview of the problems:
 1. Implement an implicit integrator and compare performance against an explicit method
 2. Find an equilibrium state to balance a quadruped on one leg using Newton's method and unconstrained optimization
 3. Simulate a falling brick by solving a quadratic program. Implement your own augmented Lagrangian QP solver
+
+
+## Submission
+Please follow these instructions. If you do not follow all of these instructions
+you will have points deducted from your homework.
+1. Fill out your name and AndrewID in `src/HW1.jl`
+2. Commit and push all of your changes to GitHub
+3. Create a release called "Submission" with a tag `v1.x` where `x` can be any number (start with `v1.0`, if you need to "patch" your submission change it to `v1.1`, then `v1.2`, i.e. follow [semantic versioning](https://semver.org/)). For more details, see [these instructions](https://github.com/Optimal-Control-16-745/JuliaIntro/blob/main/docs/Submission%20Instructions.md).
+
+## Grading Policy
+See [this document](https://github.com/Optimal-Control-16-745/JuliaIntro/blob/main/docs/Submission%20Instructions.md) for details on our grading policy. 
+Do NOT attempt to hack the autograder. We will be looking at all of your 
+solutions and any attempt to modify the autograder in any way will result in
+heavy penalties. It's there to help make your lives easier, don't abuse it!
 
 ## Getting Started
 All the homeworks are distributed as Jupyter notebooks. Follow these instructions to get everything set up.
@@ -16,33 +28,20 @@ All the homeworks are distributed as Jupyter notebooks. Follow these instruction
 4. In the REPL (hit backspace to exit the package manager), enter `using IJulia`
 5. Launch the notebook using `notebook()` or `jupyterlab()`
 
-## Submitting your Homework
-Once you have pushed your final changes to GitHub, go to Github and select "Create a new release" on the right-hand side.
-Tag your release `v1.0` and set the title to be "Submission." If you have any comments about your release, such as 
-explaining any code that may not be working, or want to provide some details about a unique approach, feel free to include
-them in the description.
+Check out Kevin's [video walkthrough](https://www.youtube.com/watch?v=I2SC1Mp3Hxs&feature=youtu.be) for HW0 for more details.
 
-The autograder will run once your release is submitted. If your tests don't pass, don't worry. We'll still run your code 
-locally and give you credit for what runs on our machines, and for what you've attempted to complete.
 
-## Running the Autograder
-You don't have to wait until your final submission to run the autograder. 
-To run the autograder locally, boot up a REPL in the root directory of this repository. Activate the current environment in the package manager (i.e. after entering `]`) using
-`activate .`. Then run the test suite (still in the package manager) enter `test HW1` and it will launch the testing suite. You will see a printout of the progress of the tests.
+## Tips for Success
+These homeworks can be pretty challenging, which is why we provide 2 weeks to complete them. Here are some tips for success:
+1. Start early
+2. Commit and push changes often. Don't be afraid to use git branches. This is 
+super helpful if you ever need to go back to a previous version because you broke something.
+3. Get with a study group!
+4. Keep your code clean. Avoid global variables. If you get odd behavior, consider restarting your kernel.
+5. Come to office hours
 
-For more information on the autograder, see [this file](https://github.com/Optimal-Control-16-745/JuliaIntro/blob/main/docs/Autograding.md).
-
-### Testing Questions Individually
-To run the tests for an individual question, follow these steps:
-1. Edit the `nb` variable in `test/runtests.jl` to be the question(s) you want. It can be either a range (e.g. `2:3`) or an integer (e.g. `2`).
-2. Run the test script. You can do this any of the following ways. All commands assume you have a terminal at the root directory of the repository:
-    * Use package manager to run full test suite. In the REPL package manager, run `activate .`, then `test HW1`.
-    * Run from the REPL. In the REPL, activate the current project via `] activate .`, then in the REPL (hit backspace to exit the package manager) run the test file using `include("test/runtests.jl")`.
-    * Run directly from the command line. Enter the following command in the terminal: `julia --project=. test/runtests.jl`
-
-Remember to change the `nb` variable back to `1:3` before you submit your final version.
-We'll try to make this process easier in future homeworks.
 
 ## Questions / Issues
-If you have questions as you work through the homework, please post to the `hw1` channel on Slack, or sign up for office hours.
+If you have questions as you work through the homework, please post to the 
+`hw1` folder on Pizza. 
 
